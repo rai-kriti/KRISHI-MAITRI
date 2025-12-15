@@ -19,6 +19,11 @@ export default function Dashboard() {
         Logout
       </button>
 
+      <h1 className="text-2xl font-semibold mb-4">
+  Welcome {localStorage.getItem("userName") || "Farmer"} 👋
+</h1>
+
+
       {/* Widgets Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
 

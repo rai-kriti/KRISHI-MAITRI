@@ -15,7 +15,9 @@ const MSPWidget = () => {
 
   return (
     <motion.div
-      onClick={() => navigate("/msp")}
+       onClick={() =>
+        navigate("/msp", { state: { fromDashboard: true } })
+      }
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.01 }}
