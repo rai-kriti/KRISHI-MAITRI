@@ -24,6 +24,18 @@ export default function Dashboard() {
 </h1>
 
 
+
+<button
+  onClick={() =>
+    navigate("/profile", { state: { fromDashboard: true } })
+  }
+  className="px-4 py-2 rounded-xl bg-[#4B5D4A] text-white text-sm"
+>
+  Profile
+</button>
+
+
+
       {/* Widgets Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
 
@@ -44,8 +56,7 @@ export default function Dashboard() {
 
       </div>
 
-      {/* Floating Chat */}
-      <FloatingChatButton />
+    
     </div>
   );
 }

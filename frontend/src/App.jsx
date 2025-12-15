@@ -6,6 +6,7 @@ import ChatbotPage from "./pages/ChatbotPage";
 import MSPPage from "./pages/MSPPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Onboarding from "./pages/Onboarding";
+import Profile from "./pages/Profile";
 export default function App() {
   return (
     <BrowserRouter>
@@ -51,7 +52,20 @@ export default function App() {
   }
 />
 
-      </Routes>
+
+
+
+<Route
+  path="/profile"
+  element={
+    <ProtectedRoute requireDashboardEntry={true}>
+      <Profile />
+    </ProtectedRoute>
+  }
+/>
+
+
+</Routes>
     </BrowserRouter>
   );
 }
