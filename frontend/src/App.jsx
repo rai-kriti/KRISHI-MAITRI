@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import ChatbotPage from "./pages/ChatbotPage";
 import MSPPage from "./pages/MSPPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import Onboarding from "./pages/Onboarding";
 export default function App() {
   return (
     <BrowserRouter>
@@ -42,6 +42,16 @@ export default function App() {
   }
 />
 
+<Route
+  path="/onboarding"
+  element={
+    <ProtectedRoute>
+      <Onboarding />
+    </ProtectedRoute>
+  }
+/>
+
+      </Routes>
     </BrowserRouter>
   );
 }
