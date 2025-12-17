@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import DashboardHeader from "../components/header/DashboardHeader";
+
 
 export default function Landing() {
   const navigate = useNavigate();

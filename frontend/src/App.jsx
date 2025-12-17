@@ -7,6 +7,7 @@ import MSPPage from "./pages/MSPPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Onboarding from "./pages/Onboarding";
 import Profile from "./pages/Profile";
+import SchemeDiscoveryPage from "./pages/SchemeDiscoveryPage";
 export default function App() {
   return (
     <BrowserRouter>
@@ -64,6 +65,16 @@ export default function App() {
   }
 />
 
+
+
+<Route
+  path="/schemes"
+  element={
+    <ProtectedRoute>
+      <SchemeDiscoveryPage />
+    </ProtectedRoute>
+  }
+/>
 
 </Routes>
     </BrowserRouter>

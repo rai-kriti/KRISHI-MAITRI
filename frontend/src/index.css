@@ -1,3 +1,6 @@
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/autoplay";
+body {
+  font-family: 'Varela Round', system-ui, sans-serif;
+}

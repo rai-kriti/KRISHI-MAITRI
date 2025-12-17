@@ -7,10 +7,19 @@ const userRoutes = require("./routes/userRoutes");
 const chatbotRoutes = require("./routes/chatbotRoutes");
 const mspRoutes = require("./routes/msp.routes");
 const authRoutes = require("./routes/authRoutes");
+
+const schemeSummaryRoutes = require("./routes/schemeSummaryRoutes");
+const schemeDiscoveryRoutes = require("./routes/schemeDiscoveryRoutes");
+
 const app = express();
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // frontend origin
+    credentials: true
+  })
+);
 app.use(express.json());
 
 
@@ -27,6 +36,8 @@ app.use("/api/user", userRoutes);
 app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/msp", mspRoutes);
 app.use("/api/auth", authRoutes);
-
+app.use("/api/discover/schemes", schemeDiscoveryRoutes);
+app.use("/api/schemes", schemeSummaryRoutes);
+ 
 // start server
 app.listen(5000, () => console.log("Server running on port 5000"));
